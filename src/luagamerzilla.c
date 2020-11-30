@@ -97,7 +97,6 @@ EXTERN int luagamerzilla_getTrophy(lua_State *L) {
 EXTERN int luagamerzilla_setTrophy(lua_State *L) {
 	_L = L;
 	const char *name = luaL_checkstring(L, 1);
-	printf("%s\n", name);
 	bool success = GamerzillaSetTrophy(game_id, name);
 	lua_pushboolean(L, success);
 	return 1;
